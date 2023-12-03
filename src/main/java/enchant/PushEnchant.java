@@ -42,6 +42,10 @@ public class PushEnchant extends Enchantment {
 				user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 10 * 4 * level, level * 2));
 				ymag = 50;
 			}
+			user.addVelocity(
+				x * (level * 0.10 + 1) * magnitude,
+				y * (level * 0.10 + 1) * magnitude * ymag,
+				z * (level * 0.10 + 1) * magnitude);
 			target.addVelocity(
 				x * (level * 0.10 + 1) * magnitude,
 				y * (level * 0.10 + 1) * magnitude * ymag,
